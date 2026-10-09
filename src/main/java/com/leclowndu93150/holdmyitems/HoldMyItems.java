@@ -1,6 +1,9 @@
 package com.leclowndu93150.holdmyitems;
 
+import com.leclowndu93150.holdmyitems.client.HoldMyItemsConfigScreen;
 import com.leclowndu93150.holdmyitems.config.HoldMyItemsClientConfig;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
@@ -16,5 +19,6 @@ public class HoldMyItems {
 
     public HoldMyItems() {
         ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, HoldMyItemsClientConfig.CLIENT_CONFIG);
+        DistExecutor.safeRunWhenOn(Dist.CLIENT, () -> HoldMyItemsConfigScreen::register);
     }
 }
