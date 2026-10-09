@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="MIT"
+
+[[mods]]
+modId="holdmyitems"
+version="1.0.4"
+displayName="Hold My Items"
+authors="leclowndu93150"
+description='''
+Animated first-person item holding. Port to Forge 1.16.5.
+'''
+
+[[dependencies.holdmyitems]]
+    modId="forge"
+    mandatory=true
+    versionRange="[36,)"
+    ordering="NONE"
+    side="CLIENT"
+
+[[dependencies.holdmyitems]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5]"
+    ordering="NONE"
+    side="CLIENT"
